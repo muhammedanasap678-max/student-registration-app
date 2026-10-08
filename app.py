@@ -27,7 +27,13 @@ age = st.number_input(
 
 student_class = st.selectbox(
     "Class",
-    ["8th Standard", "9th Standard", "10th Standard", "11th Standard", "12th Standard"]
+    [
+        "8th Standard",
+        "9th Standard",
+        "10th Standard",
+        "11th Standard",
+        "12th Standard"
+    ]
 )
 
 gender = st.selectbox(
@@ -60,7 +66,7 @@ subjects = st.multiselect(
 
 st.divider()
 
-# Registration button
+# Registration
 if st.button("📝 Register Student"):
 
     if name == "":
@@ -83,7 +89,6 @@ if st.button("📝 Register Student"):
         st.write("**Gender:**", gender)
         st.write("**Email:**", email)
         st.write("**Phone:**", phone)
-
         st.write("**Subjects:**", ", ".join(subjects))
 
         # Age eligibility
